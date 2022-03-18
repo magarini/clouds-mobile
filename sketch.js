@@ -22,7 +22,7 @@ function draw() {
   background(153,204,255);
 
   let dx = map(accelerationX, 0, width, -0.2, 0.2);
-  let wind = createVector(accelerationX, 0);
+  let wind = createVector(2*accelerationX, 0);
 
   ps.applyForce(wind);
   ps.run();
