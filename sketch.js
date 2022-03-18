@@ -6,7 +6,7 @@ let particle_texture = null;
 let ps = null;
 
 function preload() {
-  particle_texture = loadImage("pngkit_cloud-png-hd_2550829 copy 1-3.png");
+  particle_texture = loadImage("small.png");
 }
 
 function setup() {
