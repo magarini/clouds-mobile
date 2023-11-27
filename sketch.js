@@ -12,7 +12,7 @@ function preload() {
 function setup() {
 
   //set the canvas size
-  createCanvas(displayWidth, displayHeight);
+  createCanvas(windowWidth, windowHeight);
 
   //initialize our particle system
   ps = new ParticleSystem(0, createVector(width / 2, height/2), particle_texture);
@@ -32,6 +32,10 @@ function draw() {
 
   // Draw an arrow representing the wind force
   drawVector(wind, createVector(width / 2, 50, 0), 500);
+  textSize(24);
+  textAlign(CENTER);
+  fill(255);
+  text('cloudy feelings',windowWidth/2,2*windowHeight/3)
 }
 
 /**
@@ -49,6 +53,11 @@ function drawVector(v, loc, scale){
   line(len, 0, len-arrowsize, +arrowsize / 2);
   line(len, 0, len-arrowsize, -arrowsize / 2);
   pop();
+}
+
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 //========= PARTICLE SYSTEM ===========
 
